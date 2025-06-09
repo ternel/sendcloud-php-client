@@ -34,9 +34,10 @@ $parcel = $sendcloudClient->parcels()->find(2342);
 ```php
 $parcel = $sendcloudClient->parcels();
 
-$parcel->shipment = 10; // Shipping method, get possibilities from $sendCloud->shippingMethods()->all()
+$parcel->shipment = 10; // Shipping method, get possibilities from $sendcloudClient->shippingMethods()->all()
 
 $parcel->name = 'John Smith';
+$parcel->email = 'john.smith@example.com'; // email or phone required
 $parcel->company_name = 'ACME';
 $parcel->address = 'Wellingtonstreet 25';
 $parcel->city = 'Wellington';
